@@ -1,0 +1,11 @@
+class HelloWorld {
+    public static void main(String[] args) {
+        int length=4;
+        int breadth=6;
+        int area;
+        area=length*breadth;
+        System.out.println("lenght of rectangle:"+length);
+        System.out.println("breadth of rectangle:"+breadth);
+        System.out.println("area of the reactangle:"+area);
+    }
+}
