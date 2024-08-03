@@ -1,0 +1,141 @@
+ import java.sql.SQLOutput;
+ import java.util.Scanner;
+public class patterns {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("enter the no.");
+        int num = sc.nextInt();
+        System.out.println(num);
+        //hallow rectangle
+//        *****
+//        *   *
+//        *   *
+//        *   *
+//        *****
+        for (int i = 1; i <= num; i++) {
+
+            for (int j = 1; j <= num; j++) {
+                if (i == 1 || j == 1 || i == num || j == num) {
+                    System.out.print("*");
+                } else {
+                    System.out.print(" ");
+                }
+            }
+            System.out.println();
+        }
+        // triangle
+//        *
+//        **
+//        ***
+//        ****
+//        *****
+        for (int i = 1; i <= num; i++) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+        System.out.println();
+        //..inverted triangle
+//*****
+//****
+//***
+//**
+//*
+        for (int i = num; i >= 0; i--) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print("*");
+            }
+            System.out.println("");
+        }
+//
+//    *
+//   **
+//  ***
+// ****
+//*****
+
+
+        //..left right triangle..
+        for(int i=1;i<=num;i++){
+            for(int j=1;j<=num-i;j++){
+                System.out.print(" ");
+            }
+            for(int j=1;j<=i;j++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+        System.out.println();
+        //..1
+        //  12
+        //  123
+        //  1234 right traingle..
+
+        for(int i=1;i<=num;i++){
+            for(int j=1;j<=i;j++){
+                System.out.print(j);
+            }
+            System.out.println();
+        }
+        System.out.println();
+
+//        //..1
+//            22
+//            333 pattern
+        for(int i=1;i<=num;i++){
+            for(int j=1;j<=i;j++){
+                System.out.print(i);
+            }
+            System.out.println();
+        }
+        System.out.println();
+
+//        1234
+//        123
+//        12
+//        1... pattern..
+        for(int i=num;i>=1;i--){
+            for(int j=1;j<=i;j++){
+                System.out.print(j);
+            }
+            System.out.println();
+        }
+        System.out.println();
+
+//        1
+//        2 3
+//        4 5 6
+//        7 8 9 10
+//        11 12 13 14 15..floyd triangle
+
+        int count=1;
+        for(int i=1;i<=num;i++){
+            for(int j=1;j<=i;j++){
+                System.out.print(count);
+                count++;
+            }
+            System.out.println();
+        }
+            System.out.println();
+//        1
+//        01
+//        101
+//        0101..pattern
+        for(int i=1;i<=num;i++){
+            for(int j=1;j<=i;j++){
+                int sum=i+j;
+
+                if(sum%2==0){
+                    System.out.print("1");
+                }
+                else{
+                    System.out.print("0");
+                }
+            }
+            System.out.println();
+        }
+    }
+
+}
